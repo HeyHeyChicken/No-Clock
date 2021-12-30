@@ -626,7 +626,7 @@ const APP = new Vue({
         y: 17,
         value: "My LaMetric"
       },
-      remaining_time: 50
+      remaining_time: 5
     }
   },
   created() {
