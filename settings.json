@@ -1,11 +1,12 @@
 {
-    "ServerPort": 80,
+    "serverPort": 80,
     "APIKey": null,
+    "licenseKey": "non-commercial-and-evaluation",
     "client": {
-      "MondayIsFirstDay": false,
-      "TimeShowSeconds": true,
-      "BorderThickness": 3,
-      "DesiredScreenWidth": 1920,
-      "DesiredScreenHeight": 1080
+        "MondayIsFirstDay": false,
+        "TimeShowSeconds": true,
+        "BorderThickness": 3,
+        "DesiredScreenWidth": 1920,
+        "DesiredScreenHeight": 1080
     }
 }

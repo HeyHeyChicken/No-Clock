@@ -8,6 +8,12 @@ const LIBRARIES = {
 };
 
 const SETTINGS = JSON.parse(LIBRARIES.FS.readFileSync(LIBRARIES.Path.join(__dirname, "settings.json"), "utf8"));
+
+if(SETTINGS.licenseKey !== "non-commercial-and-evaluation"){
+    console.log("Your license key is invalid.");
+    process.exit();
+}
+
 if(SETTINGS.APIKey == null){
   SETTINGS.APIKey = random(40);
   LIBRARIES.FS.writeFileSync(LIBRARIES.Path.join(__dirname, "settings.json"), JSON.stringify(SETTINGS, null, 4), "utf8");
@@ -60,8 +66,8 @@ IO_SERVER.on("connection", function(socket){
   });
 });
 
-HTTP.listen(SETTINGS.ServerPort, function(){
-  console.log("You can access the GUI on http://localhost:" + SETTINGS.ServerPort + ".");
+HTTP.listen(SETTINGS.serverPort, function(){
+  console.log("You can access the GUI on http://localhost:" + SETTINGS.serverPort + ".");
 });
 
 function random(_length){
