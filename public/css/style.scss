@@ -1,0 +1,49 @@
+html{
+  background: black;
+
+  > body{
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+
+    > #app{
+      > #screen{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        > table{
+          height: 100%;
+          width: 100%;
+          border-collapse: collapse;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+
+          &:nth-child(1){
+            z-index: 1;
+          }
+
+          &:nth-child(2){
+            z-index: 2;
+          }
+
+          > tbody{
+            > tr{
+              > td{
+                padding: 0px;
+                border-width: 0px;
+                border-style: solid;
+                border-color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

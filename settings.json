@@ -1,0 +1,11 @@
+{
+    "ServerPort": 80,
+    "APIKey": null,
+    "client": {
+      "MondayIsFirstDay": false,
+      "TimeShowSeconds": true,
+      "BorderThickness": 3,
+      "DesiredScreenWidth": 1920,
+      "DesiredScreenHeight": 1080
+    }
+}

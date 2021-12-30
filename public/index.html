@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyMetric Time</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body onclick="requestFullScreen()">
+    <div id="app">
+      <div id="screen" v-bind:style="{ height: screen_height + 'px', width: screen_width + 'px' }">
+      <table v-if="!(notification.remaining_time > 0)">
+          <tbody>
+            <tr v-for="(tr, tr_index) in date_grid">
+              <td v-for="(td, td_index) in tr" v-bind:style="{ background: 'rgb' + date_grid[tr_index][td_index], borderWidth: border_thickness + 'px' }"></td>
+            </tr>
+          </tbody>
+        </table>
+        <table v-if="(notification.remaining_time > 0)">
+          <tbody>
+            <tr v-for="(tr, tr_index) in notification_grid">
+              <td v-for="(td, td_index) in tr" v-bind:style="{ background: 'rgb' + notification_grid[tr_index][td_index], borderWidth: border_thickness + 'px' }"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="./js/lib/socket.io/socket.io.js"></script>
+    <script src="./js/lib/vue/vue.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

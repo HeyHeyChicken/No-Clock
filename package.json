@@ -1,0 +1,19 @@
+{
+  "name": "my-lametric-time",
+  "version": "1.0.0",
+  "description": "Create your own personalized LaMetric Time yourself with Node.js.",
+  "main": "node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Antoine Duval",
+  "license": "SEE LICENSE IN LICENSE FILE",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "path": "^0.12.7",
+    "socket.io": "^4.4.0"
+  }
+}
