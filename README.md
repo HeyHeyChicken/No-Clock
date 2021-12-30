@@ -15,6 +15,7 @@
 Hey, I recently added animated icons 😀<br/>
 <div align="center">
  <img src="https://raw.githubusercontent.com/HeyHeyChicken/My-LaMetric-Time/main/resources/clock.gif" width="100">
+ <img src="https://raw.githubusercontent.com/HeyHeyChicken/My-LaMetric-Time/main/resources/smile.gif" width="100">
 </div>
 
 ## Installation
