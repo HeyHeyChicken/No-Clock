@@ -18,6 +18,19 @@ Hey, I recently added animated icons 😀<br/>
  <img src="https://raw.githubusercontent.com/HeyHeyChicken/My-LaMetric-Time/main/resources/smile.gif" width="100">
  <img src="https://raw.githubusercontent.com/HeyHeyChicken/My-LaMetric-Time/main/resources/poop.gif" width="100">
 </div>
+<br/>
+<div align="center">
+ <table>
+   <thead>
+     <tr>
+      <td>
+       <img src="https://www.android.com/static/images/fav/favicon.ico">
+      </td>
+      <td>Do you want to recycle your old android device in "My LaMetric Time"? <a href="https://github.com/HeyHeyChicken/My-LaMetric-Time-Android">Use this app</a>!</td>
+    </tr>
+  </thead>
+</table>
+ </div>
 
 ## Installation
 
