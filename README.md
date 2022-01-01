@@ -77,7 +77,7 @@ Finaly, you'll have to set the body like this:
 
 ## Compatibility
 
-**My LaMetric Time** has only been officially tested on Chromium based browser and Android.
+**My LaMetric Time** has only been officially tested on Chromium based browser and <a href="https://github.com/HeyHeyChicken/My-LaMetric-Time-Android">Android</a>.
 
 ## License key
 
