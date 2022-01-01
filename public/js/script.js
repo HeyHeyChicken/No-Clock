@@ -25,6 +25,8 @@ class Frame {
 const APP = new Vue({
   el: "#app",
   data: {
+    android: false,
+
     screen_width: 0,
     screen_height: 0,
 
@@ -860,7 +862,8 @@ const APP = new Vue({
         y: 17,
         value: "My LaMetric"
       },
-      remaining_time: 5
+      remaining_time: 5,
+      sound: null
     }
   },
   created() {
@@ -1089,6 +1092,16 @@ SOCKET.on("connect", function() {
 
 SOCKET.on("notification", function(_object) {
   APP.notification = _object;
+
+  if(APP.notification.sound != null){
+    if(APP.android){
+      Android.playSound(APP.notification.sound);
+    }
+    else{
+      const MUSIC = new Audio(APP.notification.sound);
+      MUSIC.play();
+    }
+  }
 });
 
 // Ce message informe de l'état de connection avec le serveur.

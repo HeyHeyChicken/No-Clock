@@ -37,7 +37,8 @@ EXPRESS.post("/notification", function requestHandler(req, res) {
           y: 0,
           value: null
         },
-        remaining_time: 5
+        remaining_time: 5,
+        sound: null
       };
       IO_SERVER.emit("notification", {
         ...NOTIFICATION,

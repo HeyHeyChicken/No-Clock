@@ -57,7 +57,8 @@ Finaly, you'll have to set the body like this:
         "y": 1,
         "value": "8 minutesand 23   seconds  remaining"
     },
-    "remaining_time": 5
+    "remaining_time": 5,
+    "remaining_time": "https://dm0qx8t0i9gc9.cloudfront.net/previews/audio/BsTwCwBHBjzwub4i4/audioblocks-bells-positive-sound_BKqfVgMUAvU_NWM.mp3"
 }
 ```
 
