@@ -994,6 +994,20 @@ const APP = new Vue({
       this.screen_height = h;
     },
 
+    showNotification(_object){
+      this.notification = _object;
+
+      if(this.notification.sound != null){
+        if(this.android){
+          Android.playSound(this.notification.sound);
+        }
+        else{
+          const MUSIC = new Audio(this.notification.sound);
+          MUSIC.play();
+        }
+      }
+    },
+
     /* This function allows you to merge two grids. */
     mergeGrids(_grid1, _grid2, _x, _y, _color){
       let merged = JSON.parse(JSON.stringify(_grid1));
@@ -1133,17 +1147,7 @@ SOCKET.on("connect", function() {
 });
 
 SOCKET.on("notification", function(_object) {
-  APP.notification = _object;
-
-  if(APP.notification.sound != null){
-    if(APP.android){
-      Android.playSound(APP.notification.sound);
-    }
-    else{
-      const MUSIC = new Audio(APP.notification.sound);
-      MUSIC.play();
-    }
-  }
+  APP.showNotification(_object);
 });
 
 // Ce message informe de l'état de connection avec le serveur.
