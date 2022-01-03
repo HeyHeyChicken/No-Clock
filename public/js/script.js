@@ -994,6 +994,15 @@ const APP = new Vue({
       this.screen_height = h;
     },
 
+    setSettings(_object){
+      this.monday_is_first_day = _object.MondayIsFirstDay;
+      this.time_show_seconds = _object.TimeShowSeconds;
+      this.border_thickness = _object.BorderThickness;
+      this.desired_screen_width = _object.DesiredScreenWidth;
+      this.desired_screen_height = _object.DesiredScreenHeight;
+      this.resizeHandler();
+    },
+
     showNotification(_object){
       this.notification = _object;
 
@@ -1152,10 +1161,5 @@ SOCKET.on("notification", function(_object) {
 
 // Ce message informe de l'état de connection avec le serveur.
 SOCKET.on("settings", function(_object) {
-  APP.monday_is_first_day = _object.MondayIsFirstDay;
-  APP.time_show_seconds = _object.TimeShowSeconds;
-  APP.border_thickness = _object.BorderThickness;
-  APP.desired_screen_width = _object.DesiredScreenWidth;
-  APP.desired_screen_height = _object.DesiredScreenHeight;
-  APP.resizeHandler();
+  APP.setSettings(_object);
 });
