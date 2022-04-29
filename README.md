@@ -3,7 +3,7 @@
 <img src="https://raw.githubusercontent.com/HeyHeyChicken/My-LaMetric-Time/main/resources/logo.png" width="300">
 <br><br>
 
-**My LaMetric Time** is a customizable clock, able to display all your notifications, made with Node.js.<br>
+**No-Clock** is a customizable clock, able to display all your notifications, made with Node.js.<br>
 
 <br>
 
@@ -26,7 +26,7 @@ Hey, I recently added animated icons 😀<br/>
       <td>
        <img src="https://www.android.com/static/images/fav/favicon.ico">
       </td>
-      <td>Do you want to recycle your old android device in "My LaMetric Time"? <a href="https://github.com/HeyHeyChicken/My-LaMetric-Time-Android">Use this app</a>!</td>
+      <td>Do you want to recycle your old android device in a "No-Clock"? <a href="https://github.com/HeyHeyChicken/My-LaMetric-Time-Android">Use this app</a>!</td>
     </tr>
   </thead>
 </table>
@@ -40,7 +40,7 @@ git clone https://github.com/HeyHeyChicken/My-LaMetric-Time.git
 ```
 2) Install packages
 ```
-cd My-LaMetric-Time
+cd No-Clock
 npm install
 ```
 
@@ -77,13 +77,13 @@ Finaly, you'll have to set the body like this:
 
 ## Compatibility
 
-**My LaMetric Time** has only been officially tested on Chromium based browser and <a href="https://github.com/HeyHeyChicken/My-LaMetric-Time-Android">Android</a>.
+**No-Clock** has only been officially tested on Chromium based browser and <a href="https://github.com/HeyHeyChicken/My-LaMetric-Time-Android">Android</a>.
 
 ## License key
 
 **The license key is obligatory.**
 
-If you use **My LaMetric Time** for purposes not intended toward monetary compensation such as, but not limited to, teaching, academic research, evaluation, testing and experimentation, pass the phrase `'non-commercial-and-evaluation'` in the "/settings.json" file, as presented below:
+If you use **No-Clock** for purposes not intended toward monetary compensation such as, but not limited to, teaching, academic research, evaluation, testing and experimentation, pass the phrase `'non-commercial-and-evaluation'` in the "/settings.json" file, as presented below:
 
 ```json
 {
