@@ -40,7 +40,7 @@ git clone https://github.com/HeyHeyChicken/My-LaMetric-Time.git
 ```
 2) Install packages
 ```
-cd No-Clock
+cd No-Clock-main
 npm install
 ```
 
