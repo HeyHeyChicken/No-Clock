@@ -1,22 +1,22 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/HeyHeyChicken/My-LaMetric-Time/main/resources/logo.png" width="300">
+<img src="https://raw.githubusercontent.com/HeyHeyChicken/No-Clock/main/resources/logo.png" width="300">
 <br><br>
 
 **No-Clock** is a customizable clock, able to display all your notifications, made with Node.js.<br>
 
 <br>
 
-<img src="https://raw.githubusercontent.com/HeyHeyChicken/My-LaMetric-Time/main/resources/demo.gif">
+<img src="https://raw.githubusercontent.com/HeyHeyChicken/No-Clock/main/resources/demo.gif">
 </div>
 
 <br>
 
 Hey, I recently added animated icons 😀<br/>
 <div align="center">
- <img src="https://raw.githubusercontent.com/HeyHeyChicken/My-LaMetric-Time/main/resources/clock.gif" width="100">
- <img src="https://raw.githubusercontent.com/HeyHeyChicken/My-LaMetric-Time/main/resources/smile.gif" width="100">
- <img src="https://raw.githubusercontent.com/HeyHeyChicken/My-LaMetric-Time/main/resources/poop.gif" width="100">
+ <img src="https://raw.githubusercontent.com/HeyHeyChicken/No-Clock/main/resources/clock.gif" width="100">
+ <img src="https://raw.githubusercontent.com/HeyHeyChicken/No-Clock/main/resources/smile.gif" width="100">
+ <img src="https://raw.githubusercontent.com/HeyHeyChicken/No-Clock/main/resources/poop.gif" width="100">
 </div>
 <br/>
 <div align="center">
@@ -26,7 +26,7 @@ Hey, I recently added animated icons 😀<br/>
       <td>
        <img src="https://www.android.com/static/images/fav/favicon.ico">
       </td>
-      <td>Do you want to recycle your old android device in a "No-Clock"? <a href="https://github.com/HeyHeyChicken/My-LaMetric-Time-Android">Use this app</a>!</td>
+      <td>Do you want to recycle your old android device in a "No-Clock"? <a href="https://github.com/HeyHeyChicken/No-Clock-Android">Use this app</a>!</td>
     </tr>
   </thead>
 </table>
@@ -36,7 +36,7 @@ Hey, I recently added animated icons 😀<br/>
 
 1) Clone it directly from GitHub.
 ```
-git clone https://github.com/HeyHeyChicken/My-LaMetric-Time.git
+git clone https://github.com/HeyHeyChicken/No-Clock.git
 ```
 2) Install packages
 ```
@@ -77,7 +77,7 @@ Finaly, you'll have to set the body like this:
 
 ## Compatibility
 
-**No-Clock** has only been officially tested on Chromium based browser and <a href="https://github.com/HeyHeyChicken/My-LaMetric-Time-Android">Android</a>.
+**No-Clock** has only been officially tested on Chromium based browser and <a href="https://github.com/HeyHeyChicken/No-Clock-Android">Android</a>.
 
 ## License key
 
