@@ -12,8 +12,11 @@
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
     "fs": "0.0.1-security",
+    "gif-frames": "^0.4.1",
     "http": "0.0.1-security",
+    "https": "^1.0.0",
     "path": "^0.12.7",
+    "png-js": "^1.0.0",
     "socket.io": "^4.4.0"
   }
 }
