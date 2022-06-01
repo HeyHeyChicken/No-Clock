@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>No-Clock</title>
     <!-- CSS -->
@@ -8,14 +8,14 @@
   <body onclick="requestFullScreen()">
     <div id="app">
       <div id="screen" v-bind:style="{ height: screen_height + 'px', width: screen_width + 'px' }">
-        <table v-if="!(notification.remaining_time > 0)">
+        <table v-if="!(notification.remaining_time > 0)" aria-label="">
           <tbody>
             <tr v-for="(tr, tr_index) in date_grid">
               <td v-for="(td, td_index) in tr" v-bind:style="{ background: 'rgb' + date_grid[tr_index][td_index], borderWidth: border_thickness + 'px' }"></td>
             </tr>
           </tbody>
         </table>
-        <table v-if="(notification.remaining_time > 0)">
+        <table v-if="(notification.remaining_time > 0)" aria-label="">
           <tbody>
             <tr v-for="(tr, tr_index) in notification_grid">
               <td v-for="(td, td_index) in tr" v-bind:style="{ background: 'rgb' + notification_grid[tr_index][td_index], borderWidth: border_thickness + 'px' }"></td>
