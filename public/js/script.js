@@ -302,16 +302,18 @@ const APP = new Vue({
         [1, 0, 0],
         [1, 1, 1]
       ],
-      "empty": [
-        ["               ", "               ", "               ", "               ", "               ", "               ", "               ", "               "],
-        ["               ", "               ", "               ", "               ", "               ", "               ", "               ", "               "],
-        ["               ", "               ", "               ", "               ", "               ", "               ", "               ", "               "],
-        ["               ", "               ", "               ", "               ", "               ", "               ", "               ", "               "],
-        ["               ", "               ", "               ", "               ", "               ", "               ", "               ", "               "],
-        ["               ", "               ", "               ", "               ", "               ", "               ", "               ", "               "],
-        ["               ", "               ", "               ", "               ", "               ", "               ", "               ", "               "],
-        ["               ", "               ", "               ", "               ", "               ", "               ", "               ", "               "]
-      ],
+      "empty": new Icon([
+        new Frame([
+          ["               ", "               ", "               ", "               ", "               ", "               ", "               ", "               "],
+          ["               ", "               ", "               ", "               ", "               ", "               ", "               ", "               "],
+          ["               ", "               ", "               ", "               ", "               ", "               ", "               ", "               "],
+          ["               ", "               ", "               ", "               ", "               ", "               ", "               ", "               "],
+          ["               ", "               ", "               ", "               ", "               ", "               ", "               ", "               "],
+          ["               ", "               ", "               ", "               ", "               ", "               ", "               ", "               "],
+          ["               ", "               ", "               ", "               ", "               ", "               ", "               ", "               "],
+          ["               ", "               ", "               ", "               ", "               ", "               ", "               ", "               "]
+        ])
+      ]),
       "calendar": new Icon([
         new Frame([
           ["(184,20 ,19 )", "(184,20 ,19 )", "(184,20 ,19 )", "(184,20 ,19 )", "(184,20 ,19 )", "(184,20 ,19 )", "(184,20 ,19 )", "(184,20 ,19 )", "(184,20 ,19 )"],
@@ -3994,19 +3996,23 @@ const APP = new Vue({
           if(this.notification.initial_remaining_time == undefined){
             this.notification.initial_remaining_time = this.notification.remaining_time;
           }
-          const ICON = this.dictionnary[this.notification.icon.value];
-          let second = (this.notification.initial_remaining_time * 1000 - Math.floor(this.notification.remaining_time * 1000)) % ICON.duration();
+          let icon = this.dictionnary[this.notification.icon.value];
+          if(!icon){
+            icon = this.dictionnary["empty"];
+          }
+
+          let second = (this.notification.initial_remaining_time * 1000 - Math.floor(this.notification.remaining_time * 1000)) % icon.duration();
           let iterator = 0;
           let frame = 0;
-          for(let i = 0; i < ICON.frames.length; i++){
-            if(second >= iterator && second < iterator + ICON.frames[i].duration){
+          for(let i = 0; i < icon.frames.length; i++){
+            if(second >= iterator && second < iterator + icon.frames[i].duration){
               frame = i;
               break;
             }
-            iterator += ICON.frames[i].duration;
+            iterator += icon.frames[i].duration;
           }
 
-          this.notification_grid = this.mergeGrids(this.notification_grid, ICON.frames[frame].grid, this.notification.icon.x, this.notification.icon.y);
+          this.notification_grid = this.mergeGrids(this.notification_grid, icon.frames[frame].grid, this.notification.icon.x, this.notification.icon.y);
         }
         this.notification_grid = this.writeWord(this.notification_grid, this.notification.message.value, this.notification.message.x, this.notification.message.y);
 
@@ -4141,13 +4147,17 @@ const APP = new Vue({
         _word = _word.toUpperCase();
         const OLD_X = _x;
         for(let x = 0; x < _word.length; x++){
-          const LETTER = this.dictionnary[_word[x]];
-          const WIDTH = LETTER[0].length;
+          let letter = this.dictionnary[_word[x]];
+          if(!letter){
+            letter = this.dictionnary[" "];
+          }
+
+          const WIDTH = letter[0].length;
           if(_x + WIDTH > this.notification_grid_width){
-            _y += LETTER.length + 1;
+            _y += letter.length + 1;
             _x = OLD_X;
           }
-          _grid = this.mergeGrids(_grid, LETTER, _x, _y, "(255,255,255)");
+          _grid = this.mergeGrids(_grid, letter, _x, _y, "(255,255,255)");
           _x += WIDTH + 1;
         }
       }
@@ -4187,12 +4197,10 @@ const APP = new Vue({
 });
 
 function requestFullScreen() {
-
   var el = document.body;
 
   // Supports most browsers and their versions.
-  var requestMethod = el.requestFullScreen || el.webkitRequestFullScreen
-  || el.mozRequestFullScreen || el.msRequestFullScreen;
+  var requestMethod = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullScreen;
 
   if (requestMethod) {
 
