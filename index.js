@@ -60,6 +60,7 @@ const HTTP = LIBRARIES.HTTP.createServer(EXPRESS);
 const IO_SERVER = LIBRARIES.SocketIO(HTTP);
 IO_SERVER.on("connection", function(socket){
   IO_SERVER.emit("settings", SETTINGS.client);
+  IO_SERVER.emit("icons", LIBRARIES.FS.readdirSync(LIBRARIES.Path.join(__dirname, "public", "js", "icons")).filter(file => file.endsWith(".js")));
 
   // Lorsque l'utilisateur fait une demande directe au serveur, on lui redirige.
   socket.on("server", function(_message){
