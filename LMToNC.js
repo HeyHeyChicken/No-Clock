@@ -1,4 +1,3 @@
-// NPN libraries
 const LIBRARIES = {
   FS: require("fs"),
   GIF_FRAMES: require("gif-frames"),
